@@ -1,0 +1,15 @@
+# Dependency directory
+node_modules
+
+# Logs
+logs
+*.log
+example/*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# others
+example/page
