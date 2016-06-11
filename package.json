@@ -8,6 +8,10 @@
     "build": "PROD_ENV=1 webpack -p --config build/webpack.config.js",
     "test": "webpack --config build/webpack.test.config.js && fis3 server start --www example --type node"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wowtous/v_select.git"
+  },
   "keywords": [
     "vue",
     "select",
@@ -15,6 +19,10 @@
   ],
   "author": "Darebeat",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wowtous/v_select/issues"
+  },
+  "homepage": "https://github.com/wowtous/v_select#README.md",
   "devDependencies": {
     "vue": "*",
     "webpack": "*"
