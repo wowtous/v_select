@@ -125,9 +125,9 @@ new Vue({
 + `refdom` - a select component id,the options of its corresponding component would be refresh when its parent component's value is changed
 + `keyword` - selected value of its parent component
 + `cache` - timestamp will be added to the url of fetching data when it is true
-+ `root` it is true when the component is the root or the first node (required)
-+ `url` url of g=fetch data from mock/api
-+ `__default__` default options value
++ `root` - it is true when the component is the root or the first node (required)
++ `url` - url of g=fetch data from mock/api
++ `__default__` - default options value
 
 
 
