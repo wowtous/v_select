@@ -2,7 +2,7 @@
   "name": "v_select",
   "version": "1.0.0",
   "description": "Vue select component",
-  "main": "src/index.js",
+  "main": "./src/v_select.js",
   "scripts": {
     "dev": "PROD_ENV=0 webpack --watch --config build/webpack.config.js",
     "build": "PROD_ENV=1 webpack -p --config build/webpack.config.js",
