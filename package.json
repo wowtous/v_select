@@ -1,0 +1,22 @@
+{
+  "name": "v_select",
+  "version": "1.0.0",
+  "description": "Vue select component",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "PROD_ENV=0 webpack --watch --config build/webpack.config.js",
+    "build": "PROD_ENV=1 webpack -p --config build/webpack.config.js",
+    "test": "webpack --config build/webpack.test.config.js && fis3 server start --www example --type node"
+  },
+  "keywords": [
+    "vue",
+    "select",
+    "v_select"
+  ],
+  "author": "Darebeat",
+  "license": "MIT",
+  "devDependencies": {
+    "vue": "*",
+    "webpack": "*"
+  }
+}
