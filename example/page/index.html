@@ -3,24 +3,21 @@
     <head>
         <meta charset="utf-8">
         <title>PAGE REFERENCES</title>
-        <script src="vue.js" charset="utf-8"></script>
     </head>
     <body>
         <div id="demo">
             <v-select :comps="comps"></v-select>
         </div>
-
+        <script src="vue.min.js" charset="utf-8"></script>
         <script src="../mock/data.js" charset="utf-8"></script>
-        <script src="v_select.js" charset="utf-8"></script>
+        <script src="../dist/v_select.js" charset="utf-8"></script>
         <script type="text/javascript">
+            Vue.component('v-select',v_select);
 
             // create a root instance
             var demo = new Vue({
                 el: '#demo',
-                data: {},
-                components : {
-                    'v-select': v_select
-                }
+                data: data
             })
         </script>
     </body>

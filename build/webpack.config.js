@@ -4,7 +4,7 @@ var PROD = JSON.parse(process.env.PROD_ENV || '0');
 var c = {
     entry: "./src/v_select.js",
     output: {
-        path: "./dist",
+        path: "./example/dist",
         filename: PROD ? 'v_select.min.js' : 'v_select.js',
         library: 'v_select'
     },

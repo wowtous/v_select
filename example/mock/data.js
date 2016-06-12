@@ -1,63 +1,82 @@
-module.exports = {
-comps:[
-    {
-        id: "s1",
-        value: "",
-        label: {
-            text:"test1",
-            style:{
-                isA : true,
-                isB : true
-            }
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+  typeof define === 'function' && define.amd ? define(factory) :
+  (global.data = factory());
+}(this, function () { 'use strict';
+
+return {
+    comps:[
+        {
+            id: "s1",
+            value: "",
+            label: {
+                text:"test1",
+                style:{
+                    isA : true,
+                    isB : true
+                }
+            },
+            root: true,
+            cache: true,
+            url: "/mock/data1/data1",
+            refdom: "s2",
+            keyword: ""
         },
-        root: true,
-        cache: true,
-        url: "/mock/data1/data1",
-        refdom: "s2",
-        keyword: ""
+        {
+            id: "s2",
+            value: "",
+            label: {
+                text:"test2",
+                style:{
+                    isA : true,
+                    isB : false
+                }
+            },
+            url: "/mock/data2/",
+            refdom: "s3",
+            keyword: ""
+        },
+        {
+            id: "s3",
+            value: "",
+            label: {
+                text:"test3",
+                style:{
+                    isA : true,
+                    isB : false
+                }
+            },
+            url: "/mock/data3/",
+            refdom: "",
+            keyword: ""
+        }
+    ],
+    a : function(){
+        data.comps[0].value = "AGL";
+        data.comps[1].value = "和面";
+        data.comps[2].value = "51";
     },
-    {
-        id: "s2",
-        value: "",
-        label: {
-            text:"test2",
-            style:{
-                isA : true,
-                isB : false
-            }
-        },
-        url: "/mock/data2/",
-        refdom: "s3",
-        keyword: ""
+    b : function(){
+        data.comps[0].value = "美的";
+        data.comps[1].value = "干磨";
+        data.comps[2].value = "51";
     },
-    {
-        id: "s3",
-        value: "",
-        label: {
-            text:"test3",
-            style:{
-                isA : true,
-                isB : false
-            }
-        },
-        url: "/mock/data3/",
-        refdom: "",
-        keyword: ""
+    c : function(){
+        data.comps[0].value = "美的";
+        data.comps[1].value = "和面";
+        data.comps[2].value = "51";
     }
-],
-a : function(){
-    data.comps[0].value = "AGL";
-    data.comps[1].value = "和面";
-    data.comps[2].value = "51";
-},
-b : function(){
-    data.comps[0].value = "美的";
-    data.comps[1].value = "干磨";
-    data.comps[2].value = "51";
-},
-c : function(){
-    data.comps[0].value = "美的";
-    data.comps[1].value = "和面";
-    data.comps[2].value = "51";
-}
 };
+
+}));
+
+
+// if(typeof exports === 'object' && typeof module === 'object') {
+//     module.exports = data;
+// } else if(typeof define === 'function' && define.amd) {
+//     define(function () {
+//         return data;
+//     })
+// } else if (typeof window !== 'undefined') {
+//     window.data = data;
+// }

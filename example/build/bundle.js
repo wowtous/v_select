@@ -10362,9 +10362,15 @@
 
 /***/ },
 /* 4 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = {
+	(function (global, factory) {
+	   true ? module.exports = factory() :
+	  typeof define === 'function' && define.amd ? define(factory) :
+	  (global.data = factory());
+	}(this, function () { 'use strict';
+
+	return {
 	    comps:[
 	        {
 	            id: "s1",
@@ -10427,6 +10433,19 @@
 	        data.comps[2].value = "51";
 	    }
 	};
+
+	}));
+
+
+	// if(typeof exports === 'object' && typeof module === 'object') {
+	//     module.exports = data;
+	// } else if(typeof define === 'function' && define.amd) {
+	//     define(function () {
+	//         return data;
+	//     })
+	// } else if (typeof window !== 'undefined') {
+	//     window.data = data;
+	// }
 
 
 /***/ }

@@ -1,5 +1,5 @@
 # v_select
-
+----
 ## Description
 
 A vue select component. <br>
@@ -20,7 +20,7 @@ npm run dev
 # build dist files
 npm run build
 
-# serve example app at localhost:8080
+# serve example app at localhost:8080 or localhost:8080/page/index.html
 npm run test
 ```
 
@@ -34,6 +34,7 @@ html
 ```
 
 mock data
+
 + mock
     - data.js
     - data1    [ "九阳", "美的", "AGL" ]
@@ -58,10 +59,7 @@ data.js
             "value": "",
             "label": {
                 "text":"test1",
-                "style":{
-                    "isA" : true,
-                    "isB" : true
-                }
+                "style":{ "isA" : true, "isB" : true }
             },
             "root": true,
             "cache": true,
@@ -74,10 +72,7 @@ data.js
             "value": "",
             "label": {
                 "text":"test2",
-                "style":{
-                    "isA" : true,
-                    "isB" : false
-                }
+                "style":{ "isA" : true, "isB" : false }
             },
             "url": "/mock/data2/",
             "refdom": "s3",
@@ -88,10 +83,7 @@ data.js
             "value": "",
             "label": {
                 "text":"test3",
-                "style":{
-                    "isA" : true,
-                    "isB" : false
-                }
+                "style":{ "isA" : true, "isB" : false }
             },
             "url": "/mock/data3/",
             "refdom": "",
@@ -115,6 +107,25 @@ new Vue({
 })
 ```
 
+OR
+
+```html
+<div id="demo">
+    <v-select :comps="comps"></v-select>
+</div>
+<script src="vue.min.js" charset="utf-8"></script>
+<script src="../mock/data.js" charset="utf-8"></script>
+<script src="../dist/v_select.js" charset="utf-8"></script>
+<script type="text/javascript">
+    Vue.component('v-select',v_select);
+
+    // create a root instance
+    var demo = new Vue({
+        el: '#demo',
+        data: data
+    })
+</script>
+```
 
 #### Property
 
@@ -130,7 +141,7 @@ new Vue({
 + `__default__` - default options value
 
 
-
+-----
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)

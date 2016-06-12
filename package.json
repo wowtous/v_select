@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "PROD_ENV=0 webpack --watch --config build/webpack.config.js",
     "build": "PROD_ENV=1 webpack -p --config build/webpack.config.js",
-    "test": "webpack --config build/webpack.test.config.js && fis3 server start --www example --type node"
+    "test": "webpack --config build/webpack.test.config.js",
+    "start": "npm run test && fis3 server start --www example --type node",
+    "stop": "fis3 server stop",
+    "info": "fis3 server info"
   },
   "repository": {
     "type": "git",
