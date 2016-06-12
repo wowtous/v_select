@@ -1,6 +1,6 @@
 {
   "name": "v_select",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Vue select component",
   "main": "./src/v_select.js",
   "scripts": {
