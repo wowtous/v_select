@@ -21,7 +21,7 @@ npm run dev
 npm run build
 
 # serve example app at localhost:8080 or localhost:8080/page/index.html
-npm run test
+npm run start
 ```
 
 ## Example

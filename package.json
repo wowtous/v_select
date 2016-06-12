@@ -1,6 +1,6 @@
 {
   "name": "v_select",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Vue select component",
   "main": "./src/v_select.js",
   "scripts": {
@@ -28,7 +28,6 @@
   "homepage": "https://github.com/wowtous/v_select#README.md",
   "devDependencies": {
     "vue": "*",
-    "webpack": "*",
-    "webpack-dev-server": "*"
+    "webpack": "*"
   }
 }
