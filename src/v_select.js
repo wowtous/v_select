@@ -1,11 +1,10 @@
 var comp = {
-    template: `
-    <label v-if="label.text" v-bind:class="label.style">{{ label.text }} : </label>
-    <select id="{{ id }}" v-model="value" v-bind:class="style" multiple="{{ multiple }}">
-        <option selected value="{{ __default__.value }}">{{ __default__.text }}</option>
-        <option v-for="o in options" value="{{ o.value || o }}">{{ o.value || o }}</option>
-    </select>
-    `,
+    template:
+    '<label v-if="label.text" v-bind:class="label.style">{{ label.text }} : </label>' +
+    '<select id="{{ id }}" v-model="value" v-bind:class="style" multiple="{{ multiple }}">' +
+        '<option selected value="{{ __default__.value }}">{{ __default__.text }}</option>' +
+        '<option v-for="o in options" value="{{ o.value || o }}">{{ o.value || o }}</option>' +
+    '</select>',
     data: function(){ return { }; },
     activate: function(d){
         this.fetchData(null,null,d);
@@ -114,31 +113,30 @@ var comp = {
         }
     },
     watch: {
-        value(val, old) { this.onChangeData(val,old,this.id); },
-        url(val, old){ this.fetchData(); },
-        keyword(val,old,d){ this.fetchData(val,this.id,d); }
+        value: function(val, old) { this.onChangeData(val,old,this.id); },
+        url: function(val, old){ this.fetchData(); },
+        keyword: function(val,old,d){ this.fetchData(val,this.id,d); }
     }
 };
 
 module.exports = {
-    template: `
-    <div v-for="comp in comps" v-bind:class="comp.c_style || { 'someClass': false }">
-        <c-select
-            :id="comp.id"
-            :label="comp.label || { text: '',style: { 'someClass': false } }"
-            :value.sync="comp.value"
-            :options="comp.options"
-            :multiple="comp.multiple"
-            :refdom="comp.refdom"
-            :keyword="comp.keyword"
-            :cache="comp.cache"
-            :root="comp.root"
-            :url="comp.url"
-            :style="comp.style || { 'someClass': false }"
-            :__default__="comp.__default__ || __default__ || { 'value': '', 'text': '__default__'}">
-        </c-select>
-    </div>
-    `,
+    template:
+    '<div v-for="comp in comps" v-bind:class="comp.c_style || c_style">' +
+        '<c-select' +
+            ' :id="comp.id"' +
+            ' :label="comp.label"' +
+            ' :value.sync="comp.value"' +
+            ' :options="comp.options"' +
+            ' :multiple="comp.multiple"' +
+            ' :refdom="comp.refdom"' +
+            ' :keyword="comp.keyword"' +
+            ' :cache="comp.cache"' +
+            ' :root="comp.root"' +
+            ' :url="comp.url"' +
+            ' :style="comp.style"' +
+            ' :__default__="comp.__default__ || __default__ || { value: \'\', text: \'__default__\'}">' +
+        '</c-select>' +
+    '</div>',
     replace: true,
     props: {
         comps: {

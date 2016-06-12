@@ -28,6 +28,7 @@
   "homepage": "https://github.com/wowtous/v_select#README.md",
   "devDependencies": {
     "vue": "*",
-    "webpack": "*"
+    "webpack": "*",
+    "webpack-dev-server": "*"
   }
 }

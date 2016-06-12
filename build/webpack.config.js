@@ -9,7 +9,9 @@ var c = {
         library: 'v_select'
     },
     module: {
-        loaders: [ ]
+        loaders: [
+          { test: /\.html$/, loader: "html" }
+        ]
     },
     plugins: PROD ? [
         new webpack.optimize.UglifyJsPlugin({
